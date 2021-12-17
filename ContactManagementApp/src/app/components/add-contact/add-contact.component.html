@@ -1,0 +1,24 @@
+<div>
+
+<form [formGroup]="addContactForm">
+
+  <span>First Name</span>
+  <input formControlName="firstName" type="text" />
+
+  <span>Last Name</span>
+  <input formControlName="lastName" type="text" />
+
+  <span>Email</span>
+  <input formControlName="email" type="email" />
+
+  <span>Phone Number</span>
+  <input formControlName="phoneNumber" type="number" maxlength="10" minlength="10" />
+
+  <span>Status</span>
+  <input formControlName="status" type="text" placeholder="Status shall be active once contact is added" readonly />
+
+</form>
+
+<button (click)="addContact(this.addContactForm)" >Add Contact</button>
+<!-- [disabled] = "!this.addContactForm.valid" -->
+</div>
